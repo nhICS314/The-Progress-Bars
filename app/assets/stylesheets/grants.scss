@@ -2,13 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+table select{
+	color: #5e5e5e;
+	 border:thin solid #777; 
+	 background-color:#fff; 
+	 border-radius:0; 
+	 background: transparent;  
+	 font-size: 14px;
+	 height: 29px; 
+	 padding: 5px; 
+	 -webkit-appearance: none; 
+	 background-image: image-url("dropdown.png");	 
+	 background-repeat:no-repeat; 
+	 background-position:92% center; 
+	 width:180px; 
+	 cursor:pointer;
+	}
+
 #dashboard-rollup{
 	width: 100%;
+	text-align:center;
 	.card{
+		text-align:left;
 		height: 140px;
 		width: 220px;
 		margin: 0 10px 10px 0;
-		float:left;
+		display:inline-grid;
 		padding: 0 0 0 10px;
 		color: #fff;
 		background-position:90% 50%;
@@ -33,18 +53,28 @@
 		background-color:green;
 		background-image: image-url("greenCard.jpg")
 	}
-	
+	p{margin: 0; padding:0; line-height:1;}
 	p.stat-number {
-		font-size: 2em;
-		line-height: 1;
-		font-weight: bold;
-		padding: 0px;
-		margin: 18px 0px 0px 0px;
+		font-size: 24px;
+		font-weight:bold;
+		padding: 15px 0 0 0;
+	}
+	.stat-title {
+		font-size: 16px;
+		font-weight:normal;
+	}
+	.stat-year {
+		font-size: 20px;
+		font-weight:normal;
+	}
+	.more-info {
+		font-size: 16px;
+		font-weight:normal;
 	}
 }
 
-
-#drill-down-chart, #stacked-chart, #line-stack-chart{
+#drill-down, #line-chart, #stacked-grouped-bar-chart, #stacked{margin:0 auto;}
+#drill-down-chart, #stacked-chart, #line-stack-chart, #faq-area{
 	background: #fff;
 	border-radius: 2px;
 	display: inline;
@@ -56,12 +86,26 @@
 }
 
 div#drill-down-chart {
-    width: 50%;
+    width: 48.5%;
+    clear:left;
 }
 div#line-stack-chart {
-    width: 48%;
+    width: 49.5%;
 }
 
 div#stacked-chart {
     width: 100%;
 }
+
+#faq-area{
+	height: 800px;
+    overflow: scroll;
+    margin-top: 20px;
+	padding: 30px;
+	font-size: 16px;
+    font-weight: normal;
+}
+
+.select-filters{text-align:center;}
+.chart-type-select{cursor:pointer; width:28px; height:28px;opacity:.95; margin-top:-10px;}
+.not-chosen{opacity:.4;}
